@@ -136,6 +136,7 @@ BOARD_SEPOLICY_UNION += \
     mpdecision.te \
     radio.te \
     recovery.te \
+    system_app.te \
     system_monitor.te \
     system_server.te \
     tad.te \
