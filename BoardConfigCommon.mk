@@ -134,7 +134,6 @@ BOARD_SEPOLICY_UNION += \
     mdm_helper.te \
     mediaserver.te \
     mpdecision.te \
-    property.te \
     radio.te \
     recovery.te \
     system_monitor.te \
