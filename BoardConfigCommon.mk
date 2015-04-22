@@ -36,6 +36,9 @@ BOARD_KERNEL_CMDLINE  := console=ttyHSL0,115200,n8 androidboot.hardware=qcom use
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 TARGET_KERNEL_SOURCE  := kernel/sony/apq8064
 
+# Enable transparent compression in the build
+TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
+
 # Enable dex-preoptimization to speed up first boot
 ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT := true
