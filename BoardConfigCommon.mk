@@ -36,12 +36,6 @@ BOARD_KERNEL_CMDLINE  := console=ttyHSL0,115200,n8 androidboot.hardware=qcom use
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 TARGET_KERNEL_SOURCE  := kernel/sony/apq8064
 
-# Enable dex-preoptimization to speed up first boot
-ifeq ($(HOST_OS),linux)
-    WITH_DEXPREOPT := true
-endif
-DONT_DEXPREOPT_PREBUILTS := true
-
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 
@@ -50,6 +44,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 TARGET_NO_RPC := true
 
 # Graphics
+BOARD_EGL_CFG := device/sony/fusion3-common/rootdir/system/lib/egl/egl.cfg
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so

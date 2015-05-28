@@ -105,7 +105,6 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    alsa.msm8960 \
     audio.primary.msm8960 \
     audio.a2dp.default \
     audio.usb.default \
@@ -148,16 +147,6 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
     p2p_supplicant.conf
 
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    e2fsck
-
 # Custom init / uevent
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
@@ -198,7 +187,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.handset.mic=analog \
     persist.audio.lowlatency.rec=false \
     ro.qc.sdk.audio.fluencetype=none \
-    lpa.decode=true
+    qcom.hw.aac.encoder=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
